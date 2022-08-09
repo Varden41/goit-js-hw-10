@@ -56,5 +56,5 @@ function markupCountry(data) {
   }" alt="flag"  width = "50px" height ="30px"/>${data[0].name.official}</p>
 <p><b>Capital:</b>${data[0].capital}</p>
 <p><b>Population:</b>${data[0].population}</p>
-<p><b>Languages</b>${Object.values(data[0].languages)}</p>`;
+<p><b>Languages:</b>${Object.values(data[0].languages)}</p>`;
 }

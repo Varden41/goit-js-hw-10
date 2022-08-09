@@ -11,7 +11,14 @@ body {
   color: #212121;
   line-height: 1.5;
 }
-
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 #search-box {
   font: inherit;
   padding: 8px;

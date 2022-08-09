@@ -19,7 +19,6 @@ input.addEventListener(
     }
 
     fetchCountries(inputTarget).then(createMarkup).catch(onError);
-    clearMarkup();
   }, DEBOUNCE_DELAY)
 );
 function clearMarkup() {
@@ -41,6 +40,7 @@ function onError() {
 }
 
 function markupList(data) {
+  clearMarkup();
   const markup = data
     .map(country => {
       return `<li style="font-size: 16px"><img src="${country.flags.svg}" alt="flag" width = "50px" height ="30px">${country.name.official}</li>`;
@@ -50,6 +50,7 @@ function markupList(data) {
   countryList.innerHTML = markup;
 }
 function markupCountry(data) {
+  clearMarkup();
   countryInfo.innerHTML = `<p style="font-size: 42px"><img src="${
     data[0].flags.svg
   }" alt="flag"  width = "50px" height ="30px"/>${data[0].name.official}</p>

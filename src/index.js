@@ -19,7 +19,7 @@ input.addEventListener(
     }
 
     fetchCountries(inputTarget).then(createMarkup).catch(onError);
-    return clearMarkup();
+    clearMarkup();
   }, DEBOUNCE_DELAY)
 );
 function clearMarkup() {
